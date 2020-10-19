@@ -1,0 +1,607 @@
+{% extends 'navigation.html' %}
+{% block content %}
+    <style>
+        .menus_for_post_add_form
+        {
+            margin-top: 2em;
+            background-color: #fff;
+            margin-left: 1em;
+            padding: 0.2em;
+        }
+        ._for_post_add_form
+        {
+            margin-top: 2em;
+            background-color: #fff;
+            margin-right: 1em;
+            padding: 1em;
+        }
+        .tab_menu
+        {
+            text-align: center;
+            margin: 0.5em;
+            border-bottom: 1px solid #f2f2f2;
+            cursor: pointer;
+        
+        }
+        .form-control
+        {
+            border-radius: 0px;
+            border-color: #ccc;
+        }
+        select.form-control
+        {
+            width:80%;
+        }
+        .form-row
+        {
+            margin-top: 1em;
+        }
+        .form_heding
+        {
+            border-bottom: 1px solid #ccc;
+        }
+        .visible_div
+        {
+            display: contents;
+        }
+        .hidden{
+            display: none;
+        }
+        body
+        {
+            background-color: #f2f2f2;
+        }
+    </style>
+    
+<div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2 menus_for_post_add_form">
+                <div class="row">
+                    <div class="col-md-12 tab_menu tab-1" >
+                        <p><span></span> Property Details</p>
+                    </div>
+                    <div class="col-md-12 tab_menu tab-2">
+                        <p><span></span> Location Details</p>
+                    </div>
+                    <div class="col-md-12 tab_menu tab-3">
+                        <p><span></span> Price Details</p>
+                    </div>
+                    <div class="col-md-12 tab_menu tab-4">
+                        <p><span></span> Amenities</p>
+                    </div>
+                    <div class="col-md-12 tab_menu tab-5">
+                        <p><span></span> Additional Information</p>
+                    </div>
+                    <div class="col-md-12 tab_menu tab-6">
+                        <p><span></span>Schedule</p>
+                    </div>
+                    <div class="col-md-12 tab_menu tab-7">
+                        <p><span></span> Gallery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-8 _for_post_add_form">
+                <div class="row visible_div content-tab-1 conntent">
+                    <div class="col-md-12 form_heding">
+                        <p>Property Details</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-row">
+                            <div class="col">
+                            <label>Apartment Type*</label>
+                            <select class="form-control" id="Apartment_Type">
+                                <option value="0">Select</option>
+                                <option value="Apartment">Apartment</option>
+                                <option value="Standalone Buliding">Standalone Buliding</option>
+                                <option value="Independent House/Villa">Independent House/Villa</option>
+                                <option value="Gated Community Villa">Gated Community Villa</option>
+                            </select>
+                            </div>
+                            <div class="col">
+                            
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="inputPassword5">BHK Type*</label>
+                                <select class="form-control" id="BHK_Type">
+                                    <option value="0">Select</option>
+                                    <option value="1 RK">1 RK</option>
+                                    <option value="1 BHK">1 BHK</option>
+                                    <option value="2 BHK">2 BHK</option>
+                                    <option value="3 BHK">3 BHK</option>
+                                    <option value="4 BHK">4 BHK</option>
+                                    <option value="4+ BHK">4+ BHK</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="inputPassword5">Ownership Type*</label>
+                                <select class="form-control" id="Ownership_Type">
+                                    <option value="0">Select</option>
+                                    <option value="On Lease">On Lease</option>
+                                    <option value="Self Owned">Self Owned</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="inputPassword5">Built Up Area*</label>
+                                <div class="input-group" style="width: 80%;">
+                                    <input type="number" class="form-control" id="Built_Up_Area" >
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Sq.ft</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="inputPassword5">Property Age*</label>
+                                <select class="form-control" id="Property_Age">
+                                    <option value="0">Select</option>
+                                    <option value="Under Construction">Under Construction</option>
+                                    <option value="Less than a Year">Less than a Year</option>
+                                    <option value="1 to 3 Year">1 to 3 Year</option>
+                                    <option value="3 to 5 Year">3 to 5 Year</option>
+                                    <option value="5 to 10 Year">5 to 10 Year</option>
+                                    <option value="More than 10 Year">More than 10 Year</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>Facing*</label>
+                                <select class="form-control" id="Facing">
+                                    <option value="0">Select</option>
+                                    <option value="North">North</option>
+                                    <option value="South">South</option>
+                                    <option value="East">East</option>
+                                    <option value="West - East">West - East</option>
+                                    <option value="South - East">South - East</option>
+                                    <option value="North - West">North - West</option>
+                                    <option value="South - West">South - West</option>
+                                    <option value="Don't Know">Don't Know</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="inputPassword5">Floor Type</label>
+                                <select class="form-control" id="Floor_Type">
+                                    <option value="0">Select</option>
+                                    <option value="Vitrified Tiles">Vitrified Tiles</option>
+                                    <option value="Mosaic">Mosaic</option>
+                                    <option value="Marble/Granite">Marble/Granite</option>
+                                    <option value="Wooden">Wooden</option>
+                                    <option value="Cement">Cement</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>Floor*</label>
+                                <select class="form-control" id="Floor">
+                                    <option value="0">Select</option>
+                                    <option value="Ground Only">Ground Only</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label>Total Floor*</label>
+                                <select class="form-control" id="Total_Floor">
+                                    <option value="0">Select</option>
+                                    <option value="Ground Only">Ground Only</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-6">
+                            </div>
+                            <div class="col">
+                                <div class="form-row">
+                                    <div class="col">
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-danger btn-block" id="Property_Details_btn">Save data</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row hidden content-tab-2 conntent">
+                    <div class="col-md-12">
+                        <p>Location Details</p>
+                    </div>
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-row">
+                              <div class="col">
+                                <label for="inputPassword5">District *</label>
+                                <select class="form-control">
+                                    <option>Apartment</option>
+                                    <option>Standalone Buliding</option>
+                                    <option>Independent House/Villa</option>
+                                    <option>Gated Community Villa</option>
+                                </select>
+                              </div>
+                              <div class="col">
+                                <label for="inputPassword5">Pin Code *</label>
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                  <label for="inputPassword5">Address *</label>
+                                  <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                  <label for="inputPassword5">Near By *</label>
+                                  <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row hidden content-tab-3 conntent">
+                    <div class="col-md-12">
+                        <p>Resale Details</p>
+                    </div>
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-row">
+                              <div class="col">
+                                <label for="inputPassword5">Expected Price *</label>
+                                <input type="text" class="form-control">
+                              </div>
+                              <div class="col">
+                                <label for="inputPassword5">Maintenance cost *</label>
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                  <label for="inputPassword5">Available from *</label>
+                                  <input type="date" class="form-control">
+                                </div>
+                                <div class="col">
+                                    <label for="inputPassword5">Kitchen type *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Modular">Modular</option>
+                                        <option value="Coverd Shelf">Coverd Shelf</option>
+                                        <option value="Open Shelf">Open Shelf</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                  <label for="inputPassword5">Furnishining *</label>
+                                  <select class="form-control">
+                                      <option value="0">Select</option>
+                                      <option value="Fully furnished">Fully furnished</option>
+                                      <option value="Semi furnished">Semi furnished</option>
+                                      <option value="Unfurnished">Unfurnished</option>
+                                  </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputPassword5">Parking *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Bike">Bike</option>
+                                        <option value="Car">Car</option>
+                                        <option value="Car and Bike">Car and Bike</option>
+                                        <option value="None">None</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                  <label for="inputPassword5">Description *</label>
+                                  <textarea class="form-control">
+
+                                  </textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row hidden content-tab-4 conntent">
+                    <div class="col-md-12">
+                        <p>Provide additional details about your property to get maximum visiblity</p>
+                    </div>
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-row">
+                              <div class="col">
+                                <label for="inputPassword5">Bathroom(s) *</label>
+                                <input type="text" class="form-control">
+                              </div>
+                              <div class="col">
+                                <label for="inputPassword5">Balcony *</label>
+                                <input type="text" class="form-control">
+                              </div>
+                              <div class="col">
+                                <label for="inputPassword5">Water supply *</label>
+                                <select class="form-control">
+                                    <option value="0">Select</option>
+                                    <option value="Corporation">Corporation</option>
+                                    <option value="Borewell">Borewell</option>
+                                    <option value="Both">Both</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="inputPassword5">Gym *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputPassword5">Power Backup *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Full">Full</option>
+                                        <option value="Partial">Partial</option>
+                                        <option value="None">None</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputPassword5">Gated security *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="inputPassword5">Who will show the house? *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="I will show">I will show</option>
+                                        <option value="Neighbours">Neighbours</option>
+                                        <option value="Friends">Friends</option>
+                                        <option value="Security">Security</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputPassword5">Secondry Number *</label>
+                                    <input type="number" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <p>Select the available amenities</p>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Club House</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Swimming Pool</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Lift</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Security</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">cChildren Play Area </label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Intercom</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Shoping Center</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Park</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">gas Pipeline</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Internet Provider</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Fire Safety</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row hidden content-tab-5 conntent">
+                    <div class="col-md-12">
+                        <p>Additional Information</p>
+                    </div>
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="inputPassword5">I want to get my property painted *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputPassword5">I want to get my property cleaned *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="inputPassword5">Do you have all document *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="inputPassword5">Have you paid property tax *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="row hidden content-tab-6 conntent">
+                    <div class="col-md-12">
+                        <p>Make house visits hassel-free by providing us your availablity</p>
+                    </div>
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <label for="inputPassword5">Availablity *</label>
+                                    <select class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-6">
+                                    <label for="inputPassword5">Start Time *</label>
+                                    <input type="time" class="form-control">
+                                </div>
+                                <div class="col-6">
+                                    <label for="inputPassword5">End Time *</label>
+                                    <input type="time" class="form-control">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="row hidden content-tab-7 conntent">
+                    <div class="col-md-12">
+                        <p>Upload Photos</p>
+                    </div>
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="" style=" text-align:center; padding:1em; margin-bottom: 50px; border: 1px solid #e2e2e2; height: 200px;justify-content: center; background: #f8f8f8;">
+                                        <svg style="width:2em; " class="jss10" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><circle cx="12" cy="12" r="3.2"></circle><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"></path><path fill="none" d="M0 0h24v24H0z"></path></svg>
+                                        <p style="font-weight: 700;">Add photos to get  more responses.</p>
+                                        <div class="nb__2lLeh" style="margin-left: 8em;">
+                                            <label for="uploadImage" class="nb__JMYoE" style="display: flex;
+                                            -webkit-box-align: center;
+                                            -ms-flex-align: center;
+                                            align-items: center;">
+                                                <div class="nb__2jxS-" style="color: #fff;
+                                                padding: 4px 20px;
+                                                border: 1px solid #009587;
+                                                cursor: pointer;
+                                                border-radius: 5px;
+                                                background: #009587;
+                                                font-weight: 500;">Add Photos</div>
+                                                    <input style="display: none;" class="nb__521Zn" id="uploadImage" type="file" multiple="" accept="image/jpg, image/jpeg">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

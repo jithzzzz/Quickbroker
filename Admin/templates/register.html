@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realproperty</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap-4.5.2-dist/bootstrap-4.5.2-dist/css/bootstrap.min.css' %}" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="{% static 'MDB-Free_4.19.1 (1)/css/mdb.min.css' %}">
+</head>
+<body>
+    <section class="testimonial py-5" id="testimonial">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                    <div class=" ">
+                        <div class="card-body">
+                            <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                            <h2 class="py-3">Registration</h2>
+                            <p>
+                                Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu, facete detracto patrioque an per, lucilius pertinacia eu vel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 py-5 border">
+                    <h4 class="pb-4">Please fill with your details</h4>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <input id="Full-Name" name="Full Name" placeholder="Full Name" class="form-control" type="text">
+                            </div>
+                            <div class="form-group col-md-6">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input id="Mobile-No" name="Mobile No." placeholder="Mobile No." class="form-control" required="required" type="text">
+                            </div>
+                            <div class="form-group col-md-6">
+                                    
+                                    <select id="inputgender" class="form-control">
+                                        <option selected>Choose Gender...</option>
+                                        <option value="M"> Male</option>
+                                        <option value="F"> Female</option>
+                                        <option value="T"> Transgender</option>
+                                        <option value="ND"> I am not intrested in answering the questien</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <input type="password" class="form-control" id="inputpassword" placeholder="Password">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="password"  class="form-control" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <button type="button" class="btn btn-danger" id="finish_processs">Finish</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Frame Modal Bottom -->
+    <div class="modal fade top" id="Registration-confirmation-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+
+    <!-- Add class .modal-frame and then add class .modal-bottom (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-frame modal-top" role="document">
+
+
+        <div class="modal-content">
+        <div class="modal-body">
+            <div class="row d-flex justify-content-center align-items-center">
+
+            <p class="pt-3 pr-2 ">
+                Your Accout is created successfuly please click blow link to login
+            </p>
+            <a href="/admin-login-form"><button type="button" class="btn btn-primary">Login</button></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- Frame Modal Bottom -->
+
+    <!-- Jaquery -->
+    <script src="{% static 'MDB-Free_4.19.1 (1)/js/jquery.min.js' %}"></script>
+    <!-- Bootstrap Js -->
+    <script src="{% static 'bootstrap-4.5.2-dist/bootstrap-4.5.2-dist/js/bootstrap.min.js' %}" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{% static 'MDB-Free_4.19.1 (1)/js/popper.min.js' %}"></script>
+    <!-- MDB Bootstrap js -->
+    <script type="text/javascript" src="{% static 'MDB-Free_4.19.1 (1)/js/mdb.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/register.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta/lib/noty.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta/lib/noty.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta/lib/themes/metroui.css">
+    <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
+    
+
+</body>
+</html>

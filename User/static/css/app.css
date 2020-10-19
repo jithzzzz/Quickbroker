@@ -1,0 +1,82 @@
+.rounded-circle
+{
+    width: 2.5em;
+}
+body{
+    overflow-x: hidden;
+}
+.dashbord_header_potion
+{
+    text-align: center;
+    background: url('/static/images/pexels-skitterphoto-584399.jpg') no-repeat center center fixed;
+    height: 30em;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0px;
+   
+}
+.user_dash_search_inputs select.form-control
+{
+    height: calc(2.5em + .75rem + 2px);
+}
+.user_dash_search_inputs select.form-control:focus{
+    border-color: #e0e0e0;
+    box-shadow: none;
+}
+.user_dash_search_inputs input.form-control
+{
+    height: calc(2.5em + .75rem + 2px);
+}
+.user_dash_search_inputs input.form-control:focus{
+    border-color: #e0e0e0;
+    box-shadow: none;
+}
+.user_dash_search_inputs button
+{
+    height: calc(3em + .75rem + 2px);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    margin: 0px;
+}
+.addition_filter_elements
+{
+    display: none;
+    padding: 10px 7px;
+    background-color: #FCFCFC;
+    text-align: left;
+    margin-left: 24.9%;
+    margin-top: -2em;
+}
+.addition_filter_elements select
+{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

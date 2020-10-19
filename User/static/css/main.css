@@ -1,0 +1,169 @@
+/*
+.img-basic-proprty-display
+{
+    width: 100%;
+    max-width: 100%;
+}
+
+.margin-1
+{
+    margin-right: 0.3px;
+}
+
+.hidden-spacer {
+    height: 96px
+}
+
+
+
+.btn_round-corner
+{
+    border-radius: 2em;
+    width: 6em;
+    height: 3em;
+}
+
+
+
+*/
+
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    font-family: "Playfair Display", serif;
+}
+.nav-link{
+    font-size: 1.25rem;
+}
+
+.navbar-brand_custom
+{
+    color: white;
+    font-weight: 900;
+    font-size: 2.25rem;
+    margin-right: 1em;
+}
+
+
+.bg-img {
+    /* The image used */
+    background-image: url("/static/images/k.jpg");
+  
+    min-height: 510px;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    /* Needed to position the navbar */
+    position: relative;
+  }
+  
+  /* Position the navbar container inside the image */
+  .container-nav {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+    right: 0px;
+  }
+  .container-serach
+  {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 12em;
+  }
+  .heading-div
+  {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 7em;
+  }
+  
+  /* The navbar */
+  .topnav {
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  /* Navbar links */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  div.topnav a{
+    font-size: 1.25rem;
+  }
+
+  .serch_input_select_big
+{
+    top:10em;
+    left: 15%;
+    width: 20%;
+    height: calc(1.5em + .95rem + 5px);
+    bottom: 4em;
+}
+
+.serch_input_box_big
+{
+    top:10em;
+    left: 35%;
+    width: 45%;
+    height: calc(1.5em + .95rem + 5px);
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 20em;
+}
+.serch_input_button_big
+{
+    height: calc(1.5em + .95rem + 5px);
+}
+div.container-serach .form-control
+{
+    display: inline;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+div.container-serach .form-control:focus {
+    color: #495057;
+    background-color: #fff; 
+    border-color: white; 
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem white; 
+}
+section.pricing-table
+{
+    padding: 1em;
+}
+
+.propert_tag_line_heading
+{
+    ont-family: "Poppins", sans-serif;
+    font-size: 70px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-weight: 600;
+    line-height: 70px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+div.logon-form-user .form-control
+{
+  border-radius: 0px;
+}
+
+.div.logon-form-user
+{
+  padding:1em;
+}

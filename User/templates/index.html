@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Property</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap-4.5.2-dist/bootstrap-4.5.2-dist/css/bootstrap.min.css' %}" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+     <!-- Material Design Bootstrap -->
+     <link rel="stylesheet" href="{% static 'MDB-Free_4.19.1 (1)/css/mdb.min.css' %}">
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="bg-img">
+        <div class="container-nav">
+          <div class="topnav">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="" data-toggle="modal" data-target="#user_login_form">Login</a>
+            <a href="#about">Signup</a>
+          </div>
+        </div>
+        <div class="heading-div">
+            <h2 class="propert_tag_line_heading">Find Your Best Propertys</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.</p>
+        </div>
+        <div class="container-serach">
+            <select class=" form-control serch_input_select_big">
+                <option value="Thrissur">Thrissur</option>
+                <option value="Kollam">Kollam</option>
+            </select>
+            <input class=" form-control serch_input_box_big" type="search">
+            <button class=" btn btn-danger serch_input_button_big">Search</button>
+        </div>
+    </div>
+    
+    
+    <!-- Trending ADS or Popular ADS-->
+    <div class="col-md-12" style="margin-top:2em; margin-bottom: 2em;">
+        <div class="row"  style="margin-left: 4.5em;">
+            <div class="col-md-3" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);margin:0px;padding: 0px;">
+                <div class="col-md-12" style="margin: 0px; padding: 0px;">
+                    <!--Property Image-->
+                    <img src="/static/images/k.jpg" class="" style="max-width: 100%; width: 100%; height: 13em; max-height: 13em;">
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6" style="padding-left:0%; padding-right: 3px; border-right: 1px solid #f4f6f6;">
+                            <p>450000</p>
+                            <p style="margin: 0px; padding: 0px;">Estimeted Price</p>
+                        </div>
+                        <div class="col-md-6" style="padding:0%;">
+                            <p>1472 sqft</p>
+                            <p>Builtup</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" style="margin: 0px; padding: 1em;">
+                    <button class="btn btn-danger  btn-md btn-block" style="">Get Details</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!--Pricing table-->
+    <!-- Section: Pricing table -->
+    <section id="one" class="pricing-table d-flex align-items-center" style="background:linear-gradient(40deg, #e4edf1, #eff1ff) !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4></h4>
+                </div>
+            </div>
+            <div class="row">
+                {% for item in subscription_plans %}
+                <div class="col-lg-4">
+                    <div class="card mb-5 mb-lg-0">
+                        <div class="card-body">
+                            <h5 class="card-title grey-text text-uppercase text-center">{{item.plan_name}}</h5>
+                            <h6 class="card-price text-center">{{item.monthly_price}}<span class="term">/month</span></h6>
+                            <hr class="my-4">
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Ad Live {{item.ad_active_time}} days</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>{{item.number_of_ad_month}} Ads per month</li>
+                                {% if item.dedicated_chat %}
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated chat support available</li>
+                                {% else %}
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>Dedicated chat support not available</li>
+                                {% endif %}
+
+                                {% if item.dedicated_phone %}
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>24 * 7 Phone support available</li>
+                                {% else %}
+                                    <li><span class="fa-li"><i class="fas fa-check"></i></span>24 * 7 Phone support not available</li>
+                                {% endif %}
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>Service charge for 1 year {{item.service_charge}}</li>
+                                
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>{{item.commision_less_25_lack}}% commision for 25 lack</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>{{item.commision_more_25_lack}}% commision for mrore than 25 lack</li>
+                                <li><span class="fa-li"><i class="fas fa-check"></i></span>{{item.commision_more_50_lack}}% commision for  more than 50 lack</li>
+                            </ul>
+
+                            <a href="#" class="btn btn-block btn-primary z-depth-0 btn-rounded my-2">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- Section: Pricing table -->
+    
+
+
+
+  
+    
+    <!-- User Login Modal-->
+    <div class="modal fade" id="user_login_form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+    
+        <!-- Change class .modal-sm to change the size of the modal -->
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body" style="margin:0px;padding:0px;">
+                    <div class="col-md-12" style="margin:0px;padding:0px;">
+                        <div class="row" style="margin:0px;padding:0px;">
+                            <div class="col-md-6" style="margin:0px;padding:0px;">
+                                <div class="col-md-12" style="margin:0px;padding:0px;">
+                                    <img src="/static/images/login-form-background.jpeg" style="width: 100%; max-width: 100%; height: 25em;">
+                                </div>
+                            </div>
+                            <div class="col-md-6 logon-form-user" style="margin-top: 2em;">
+                                <h4>Sign into your account</h4>
+                                <div class="form-row" style="margin-top: 1em;">
+                                    <div class="col-md-12">
+                                        <input type="email" class="form-control" placeholder="Enter Email Id" id="login-email">
+                                    </div>
+                                </div>
+                                <div class="form-row" style="margin-top: 1em;">
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control" placeholder="Password" id="login-password">
+                                    </div>
+                                </div>
+                                <div class="form-row" style="margin-top: 1em;">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-dark btn-block" id="login-submit-user">Login</button>
+                                    </div>
+                                </div>
+                                <div class="form-row" style="margin-top: 1em; padding-top:1em; padding-bottom: 1em;">
+                                    <div class="col-md-12">
+                                        <a href="">Forgot Password</a>
+                                    </div>
+                                    <div class="col-md-12" style="margin-top: 0.5em;">
+                                        <a href="">Don't have account? register here</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- User Login Modal close -->
+
+
+   <!-- Jaquery -->
+    <script src="{% static 'MDB-Free_4.19.1 (1)/js/jquery.min.js' %}"></script>
+    <!-- Bootstrap Js -->
+    <script src="{% static 'bootstrap-4.5.2-dist/bootstrap-4.5.2-dist/js/bootstrap.min.js' %}" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{% static 'MDB-Free_4.19.1 (1)/js/popper.min.js' %}"></script>
+    <!-- MDB Bootstrap js -->
+    <script type="text/javascript" src="{% static 'MDB-Free_4.19.1 (1)/js/mdb.min.js' %}"></script>
+    <!-- Custom Js -->
+    <script type="text/javascript" src="{% static 'js/user_app.js' %}"></script>
+
+    <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
+    <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+</body>
+</html>

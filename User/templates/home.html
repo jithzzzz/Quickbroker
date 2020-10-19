@@ -1,0 +1,78 @@
+{% extends 'navigation.html' %}
+{% block content %}
+
+    <div class="col-md-12 dashbord_header_potion" style="margin:0px;padding:0px; top:-1em">
+        <div class="row" style="margin:0px; margin-right: 0px; margin-left: 0px;">
+            <div class="col-md-12" style="margin-top: 6em;">
+                <h4>Keral's Largest  Property Site</h4>
+            </div>
+        </div>
+        <div class="row" style="padding:2em; text-align: center; margin-left: 22%;">
+            <div class="col-md-2 user_dash_search_inputs" style="padding: 0px;">
+                <select class="form-control" style="border-radius: 0; border-color: #e0e0e0;">
+                    <option>Select</option>
+                    <option value="Alappuzha">Alappuzha</option>
+                    <option value="Ernakulam">Ernakulam</option>
+                    <option value="Idukki">Idukki</option>
+                    <option value="Kannur">Kannur</option>
+                    <option value="Kasaragod">Kasaragod</option>
+                    <option value="Kollam">Kollam</option>
+                    <option value="Kottayam">Kottayam</option>
+                    <option value="Kozhikode">Kozhikode</option>
+                    <option value="Malappuram">Malappuram</option>
+                    <option value="Palakkad">Palakkad</option>
+                    <option value="Pathanamthitta">Pathanamthitta</option>
+                    <option value="Thiruvananthapuram">Palakkad</option>
+                    <option value="Palakkad">Thiruvananthapuram</option>
+                    <option value="Thrissur">Thrissur</option>
+                    <option value="Wayanad">Wayanad</option>
+                    
+                </select>
+            </div>
+            <div class="col-md-4 user_dash_search_inputs" style="padding: 0px;">
+                <input type="search" class="form-control serach_input" style="border-radius: 0px; border-color: #e0e0e0;">
+            </div>
+            <div class="col-md-2 user_dash_search_inputs" style="padding: 0px;">
+                <button class="btn btn-danger" style="width: 100%;border-radius: 0px;">Search</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="addition_filter_elements" id="addition_filter_elements">
+
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#frameModalBottom">
+    Launch demo modal
+  </button>
+  
+  <!-- Frame Modal Bottom -->
+  <div class="modal fade top" id="frameModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+  
+    <!-- Add class .modal-frame and then add class .modal-bottom (or other classes from list above) to set a position to the modal -->
+    <div class="modal-dialog modal-frame modal-top" role="document">
+  
+  
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row d-flex justify-content-center align-items-center">
+  
+            <p class="pt-3 pr-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit nisi quo
+              provident fugiat reprehenderit nostrum
+              quos..
+            </p>
+  
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Frame Modal Bottom -->
+
+  {% endblock %}
+
+   
