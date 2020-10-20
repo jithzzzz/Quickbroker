@@ -6,13 +6,10 @@ from django.db.models import Q
 from Admin.models import Admin_Profile, subscription_plans
 
 
-url_dict = { 'Register': '/admin-register-form' }
-
-
 # Create your views here.
 
 def login_form(request):
-    return render(request, 'login.html')
+    return render(request, 'admin_ogin.html')
 
 
 def login(request):
@@ -40,7 +37,7 @@ def login(request):
 
 
 def register_form(request):
-    return render(request, 'register.html')
+    return render(request, 'admin_register.html')
 
 
 def register(request):
@@ -62,10 +59,10 @@ def register(request):
 
 def dashboard(request):
     if request.session.has_key('user_id'):
-                print("%%%%%%%%")
-                return render(request, 'dashboard.html')
+        print("%%%%%%%% #######################")
+        return render(request, 'dashboard.html')
     else:
-        return render(request, 'login.html')
+        return render(request, 'admin_login.html')
 
 
 def subscriptio_view_form(request):
@@ -86,10 +83,11 @@ def submit_subscription_plan(request):
             service_charge = int(request.POST['service_charge'])
             chat_support =  request.POST['chat_support']
             phone_support = request.POST['phone_support']
+            image_per_ad = request.POST['image_per_ad']
             print("&&&&&&&&&&&&&&&&&&&&&&&&")
             subscription_plans.objects.create(plan_name=plan_name, ad_active_time=active_time, dedicated_chat=chat_support, 
             dedicated_phone=phone_support, number_of_ad_month=no_post_month, commision_less_25_lack=c_25, commision_more_25_lack=c_more_25,
-            commision_more_50_lack=c_more_50, monthly_price=sub_price, service_charge=service_charge, status=status)
+            commision_more_50_lack=c_more_50, monthly_price=sub_price, service_charge=service_charge, status=status, number_of_image_per_ads=image_per_ad)
             return JsonResponse({'Status': True, 'Message': 'New Plan Created'})
 
         except Exception as e:

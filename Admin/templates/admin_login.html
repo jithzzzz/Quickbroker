@@ -51,7 +51,9 @@
                         <div class="row px-3 mb-4">
                             <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
                         </div>
-                        <div class="row mb-3 px-3"> <button class="btn btn-blue text-center" id="login-submit">Login</button> </div>
+                        <div class="row mb-3 px-3">
+                            <button class="btn btn-blue text-center" id="login_submit_admin">Login</button>
+                        </div>
                         <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <a class="text-danger" href="/admin-register-form">Register</a></small> </div>
                     </div>
                 </div>
@@ -73,6 +75,9 @@
     <!-- MDB Bootstrap js -->
     <script type="text/javascript" src="{% static 'MDB-Free_4.19.1 (1)/js/mdb.min.js' %}"></script>
     <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
-    <script type="text/javascript" src="{% static 'js/login.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/admin_login.js' %}"></script>
+    <script>
+        
+    </script>
 </body>
 </html>

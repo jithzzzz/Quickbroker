@@ -1,4 +1,5 @@
-$("#login-submit").click(function(){
+$("#login_submit_admin").click(function(){
+    alert('ppppp');
     console.log("*** Admin Login ***");
     var login_email = $("#login-email").val();
     var login_password =  $("#login-password").val();
@@ -30,4 +31,4 @@ $("#login-submit").click(function(){
             console.log(res)
         }
     });
-})
+});

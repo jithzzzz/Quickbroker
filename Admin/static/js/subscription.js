@@ -11,6 +11,7 @@ $("#submit_subscription_form").click(function(){
     var service_charge = $("#service_charge").val();
     var chat_support = $("#chat_support").val();
     var phone_support = $("#phone_support").val();
+    var image_per_ad = $("#image_per_ad").val();
 
     $.ajax({
         url: '/submit-subscription-plan',
@@ -27,7 +28,8 @@ $("#submit_subscription_form").click(function(){
             sub_price: sub_price,
             service_charge: service_charge,
             chat_support: chat_support,
-            phone_support: phone_support
+            phone_support: phone_support,
+            image_per_ad : image_per_ad
         },
         success:function(data){
             console.log(data);

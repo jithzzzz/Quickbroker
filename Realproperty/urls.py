@@ -35,5 +35,10 @@ urlpatterns = [
     path('sell-property/', us.sell_property),
     path('new-post-form/', us.new_post_form),
     path('property-details-submit', us.property_details_submit),
+    path('location-details-submit', us.location_details_submit),
+    path('resale-details-submit', us.resale_details_submit),
+    path('amenities-submit', us.amenities_submit),
+    path('additional-information-submit', us.additional_information_submit),
+    path('Schedule-information-submit', us.Schedule_information_submit),
 
 ]

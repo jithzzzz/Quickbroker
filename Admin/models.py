@@ -30,6 +30,7 @@ class subscription_plans(models.Model):
     commision_more_50_lack = models.IntegerField(default=0)
     monthly_price = models.BigIntegerField(default=0.00)
     service_charge = models.BigIntegerField(default=0.00)
+    number_of_image_per_ads = models.IntegerField(default=0)
     status = models.BooleanField(default=False)
 
     class Meta:
